@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SOStudent.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSArray *names = @[@"Sergey", @"Alex", @"Sacha", @"Maxim", @"Andrey", @"Misha", @"Vova", @"Ilya"];
+    
+    NSArray *lastNames = @[@"Balabanov", @"Balabanov", @"Vashyk", @"Shevchenko", @"Izotov", @"Rydenko", @"Shovko", @"Brig"];
+    
+    NSArray *phreses = @[@"Hello to all",
+                         @"Hello to everyone",
+                         @"Hello!",
+                         @"Hi",
+                         @"Hi guys!",
+                         @"How are you doing?",
+                         @"Hel-lo",
+                         @"Hi, hi, hi!"];
+    
+    NSMutableDictionary *jounal = [NSMutableDictionary dictionary];
+    
+    for (int i = 0; i < names.count; i++) {
+        SOStudent *student = [[SOStudent alloc] init];
+        student.firstName = [names objectAtIndex:i];
+        student.lastName = [lastNames objectAtIndex:i];
+        student.helloPhrase = [phreses objectAtIndex:i];
+        [jounal setObject:student forKey:[NSString stringWithFormat:@"%@ %@", student.lastName, student.firstName]];
+    }
+    
+    SOStudent *student;
+    for (int i = 0; i < [[jounal allKeys] count]; i++) {
+        student = [jounal objectForKey:[[jounal allKeys] objectAtIndex:i]];
+        NSLog(@"%@ %@ said:\"%@\"", student.lastName, student.firstName, student.helloPhrase);
+    }
+    
+    NSArray *sortedKeys = [jounal keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSString *firstStudent = [((SOStudent *)obj1).lastName stringByAppendingString:((SOStudent *)obj1).firstName];
+        NSString *secondStudent = [((SOStudent *)obj2).lastName stringByAppendingString:((SOStudent *)obj2).firstName];
+        return [firstStudent compare:secondStudent];
+    }];
+    
+    NSLog(@"%@", sortedKeys);
+    
+    for (int i = 0; i < [sortedKeys count]; i++) {
+        student = [jounal objectForKey:[sortedKeys objectAtIndex:i]];
+        NSLog(@"%@ %@ said:\"%@\"", student.lastName, student.firstName, student.helloPhrase);
+    }
+    
     return YES;
 }
 

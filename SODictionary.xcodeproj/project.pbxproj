@@ -14,6 +14,8 @@
 		CC7E0A5B1B3EA89100AD9822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7E0A5A1B3EA89100AD9822 /* Images.xcassets */; };
 		CC7E0A5E1B3EA89100AD9822 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7E0A5C1B3EA89100AD9822 /* LaunchScreen.xib */; };
 		CC7E0A6A1B3EA89100AD9822 /* SODictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E0A691B3EA89100AD9822 /* SODictionaryTests.m */; };
+		CC7E0A751B3EA8BE00AD9822 /* SOStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E0A741B3EA8BE00AD9822 /* SOStudent.m */; };
+		CC7E0A771B3EAF4900AD9822 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CC7E0A761B3EAF4900AD9822 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		CC7E0A631B3EA89100AD9822 /* SODictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SODictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7E0A681B3EA89100AD9822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC7E0A691B3EA89100AD9822 /* SODictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SODictionaryTests.m; sourceTree = "<group>"; };
+		CC7E0A731B3EA8BE00AD9822 /* SOStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOStudent.h; sourceTree = "<group>"; };
+		CC7E0A741B3EA8BE00AD9822 /* SOStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOStudent.m; sourceTree = "<group>"; };
+		CC7E0A761B3EAF4900AD9822 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				CC7E0A5A1B3EA89100AD9822 /* Images.xcassets */,
 				CC7E0A5C1B3EA89100AD9822 /* LaunchScreen.xib */,
 				CC7E0A4D1B3EA89100AD9822 /* Supporting Files */,
+				CC7E0A731B3EA8BE00AD9822 /* SOStudent.h */,
+				CC7E0A741B3EA8BE00AD9822 /* SOStudent.m */,
+				CC7E0A761B3EAF4900AD9822 /* .gitignore */,
 			);
 			path = SODictionary;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7E0A771B3EAF4900AD9822 /* .gitignore in Resources */,
 				CC7E0A591B3EA89100AD9822 /* Main.storyboard in Resources */,
 				CC7E0A5E1B3EA89100AD9822 /* LaunchScreen.xib in Resources */,
 				CC7E0A5B1B3EA89100AD9822 /* Images.xcassets in Resources */,
@@ -222,6 +231,7 @@
 				CC7E0A561B3EA89100AD9822 /* ViewController.m in Sources */,
 				CC7E0A531B3EA89100AD9822 /* AppDelegate.m in Sources */,
 				CC7E0A501B3EA89100AD9822 /* main.m in Sources */,
+				CC7E0A751B3EA8BE00AD9822 /* SOStudent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
